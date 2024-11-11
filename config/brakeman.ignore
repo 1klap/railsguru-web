@@ -1,0 +1,29 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "File Access",
+      "warning_code": 16,
+      "fingerprint": "6269ddd97f4817e5aa4abe98190b1f848e8a34164957a6456a567d1736816245",
+      "check_name": "FileAccess",
+      "message": "Parameter value used in file name",
+      "file": "app/controllers/blogs_controller.rb",
+      "line": 8,
+      "link": "https://brakemanscanner.org/docs/warning_types/file_access/",
+      "code": "File.read(\"app/views/blogs/#{ActiveStorage::Filename.new(\"#{params[:slug]}.md\").sanitized}\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "BlogsController",
+        "method": "show"
+      },
+      "user_input": "params[:slug]",
+      "confidence": "Weak",
+      "cwe_id": [
+        22
+      ],
+      "note": "input is sanitized before usage, considered safe"
+    }
+  ],
+  "updated": "2024-11-11 09:03:38 +0100",
+  "brakeman_version": "6.2.2"
+}
