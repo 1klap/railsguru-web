@@ -1,6 +1,7 @@
 # Building the Site: The Blog
 
-*Published: 2024-11-09 by Kim*
+*Published: 2024-11-09 by Kim* / 
+*Last Update: 2024-11-11 by Kim*
 
 Welcome to the blog! You'll find here posts about the process of building this site, as well as other topics that I 
 find interesting.
@@ -31,19 +32,17 @@ In the controller for the blog, I fetch the markdown file with the same name fro
 Clearly this is not a scalable solution, but it will do for now.
 
 ```ruby
+post_filename = ActiveStorage::Filename.new("#{params[:slug]}.md").sanitized
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, fenced_code_blocks: true)
-slug = params[:slug].gsub(/[^0-9A-Za-z\-]/, "_")
-@rendered_html = markdown.render(File.read("app/views/blogs/#{slug}.md"))
+@rendered_html = markdown.render(File.read("app/views/blogs/#{post_filename}"))
 ```
 
 Also, since there is a file read based on user input, I will need to prevent directory traversal by sanitizing the 
-slug in the second line.
+slug in the first line.
 
 ## Next Steps & Final Thoughts
 
 Once a visual identity is established, I will need to create a layout for the blog posts. 
-
-Also, testing should be added; while the business logic is minimal, the path sanitization deserves coverage.
 
 If you want to follow along, you can find the code for this site on [GitHub](https://github.com/1klap/railsguru-web)
 
