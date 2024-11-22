@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_22_084249) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_22_160738) do
+  create_table "request_logs", force: :cascade do |t|
+    t.string "controller"
+    t.string "action"
+    t.string "path"
+    t.integer "status"
+    t.integer "duration_ms"
+    t.string "visitor_hash"
+    t.integer "user_id"
+    t.string "user_agent"
+    t.string "ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_request_logs_on_user_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"
@@ -29,5 +44,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_22_084249) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "request_logs", "users"
   add_foreign_key "sessions", "users"
 end
