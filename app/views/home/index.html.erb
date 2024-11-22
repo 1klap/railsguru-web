@@ -1,3 +1,14 @@
+<% if authenticated? %>
+  <nav>
+    Signed in as <%= Current.user.email %>
+    <%= button_to "Sign out", session_path, method: :delete %>
+  </nav>
+<% else %>
+  <nav>
+    <%= link_to "Sign in", new_session_path %>
+  </nav>
+<% end %>
+
 <main>
   <div class="hero-wrapper">
     <div class="hero">
