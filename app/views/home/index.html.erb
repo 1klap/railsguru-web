@@ -1,6 +1,6 @@
 <% if authenticated? %>
   <nav>
-    Signed in as <%= Current.user.email %>
+    Signed in as <%= Current.user.email %> (<%= Current.user.full_name %>).
     <%= button_to "Sign out", session_path, method: :delete %>
   </nav>
 <% else %>

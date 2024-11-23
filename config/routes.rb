@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   ### Auth ###
   resource :session, only: [ :new, :create, :destroy ]
   resources :passwords, param: :token, only: [ :new, :create, :edit, :update ]
+  get "/auth/:provider/callback" => "sessions/omni_auths#create", as: :omniauth_callback
+  post "/auth/:provider/callback" => "sessions/omni_auths#create"
+  get "/auth/failure" => "sessions/omni_auths#failure", as: :omniauth_failure
 
   ### Operations ###
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
