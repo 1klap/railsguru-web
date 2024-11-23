@@ -13,6 +13,7 @@ module Authentication
   end
 
   private
+
   def authenticated?
     resume_session
   end
@@ -21,7 +22,6 @@ module Authentication
     resume_session || request_authentication
   end
 
-
   def resume_session
     Current.session ||= find_session_by_cookie
   end
@@ -29,7 +29,6 @@ module Authentication
   def find_session_by_cookie
     Session.find_by(id: cookies.signed[:session_id])
   end
-
 
   def request_authentication
     session[:return_to_after_authenticating] = request.url

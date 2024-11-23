@@ -1,6 +1,6 @@
 class Sessions::OmniAuthsController < ApplicationController
-  allow_unauthenticated_access only: [:create, :failure]
-  skip_forgery_protection only: [:create]
+  allow_unauthenticated_access only: [ :create, :failure ]
+  skip_forgery_protection only: [ :create ]
 
   def create
     auth = request.env["omniauth.auth"]
