@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password validations: false
   has_many :sessions, dependent: :destroy
+  has_many :omni_auth_identities, dependent: :destroy
+  has_many :request_logs, dependent: :nullify
 
   validates :email, presence: true,
             format: { with: URI::MailTo::EMAIL_REGEXP },
