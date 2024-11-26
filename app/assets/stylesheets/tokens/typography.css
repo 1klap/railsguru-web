@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'aileron';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/aileron/Aileron-Regular-webfont.woff') format('woff'),
+    url('/fonts/aileron/Aileron-Regular-webfont.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'aileron';
+    font-weight: 500 600;
+    font-style: normal;
+    src: url('/fonts/aileron/Aileron-SemiBold-webfont.woff') format('woff'),
+    url('/fonts/aileron/Aileron-SemiBold-webfont.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'aileron';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/aileron/Aileron-Bold-webfont.woff') format('woff'),
+    url('/fonts/aileron/Aileron-Bold-webfont.ttf') format('truetype');
+}
+
+p {
+    font-size: var(--text-size-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.15;
+}
+
+h1,
+.text-size-h1 {
+    font-weight: 700;
+    margin-top: 0;
+    font-size: var(--text-size-4xl);
+}
+
+h2,
+.text-size-h2 {
+    font-size: var(--text-size-3xl)
+}
+
+h3,
+.text-size-h3 {
+    font-size: var(--text-size-2xl)
+}
+
+h4,
+.text-size-h4 {
+    font-size: var(--text-size-xl)
+}
+
+h5,
+.text-size-h5 {
+    font-size: var(--text-size-lg)
+}
+
+.text-caption {
+    font-size: var(--text-size-sm)
+}
+
+small,
+.text-small {
+    font-size: var(--text-size-sm);
+}
+
+.font-base {
+    font-family: 'aileron', 'Helvetica', 'Arial', sans-serif;
+    /*font-size: var(--text-size-md);*/
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}

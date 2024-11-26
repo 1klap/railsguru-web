@@ -1,0 +1,20 @@
+<div id="<%= dom_id lesson %>" class="lesson">
+  <article>
+
+    <h1><%= lesson.title %></h1>
+
+    <section class="publication_info">
+      <%= local_time(lesson.published_at, '%B %e, %Y') %> by <%= lesson.user.full_name %>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <%= lesson.summary %>
+    </section>
+
+    <section class="content">
+      <%= lesson.content_html.html_safe %>
+    </section>
+
+  </article>
+</div>

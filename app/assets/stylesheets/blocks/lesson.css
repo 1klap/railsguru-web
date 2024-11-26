@@ -1,0 +1,72 @@
+.lesson {
+    /*padding: 1rem;*/
+
+    h1 {
+        margin-top: 3rem;
+        font-size: var(--text-size-4xl);
+    }
+
+    h2 {
+        /*font-size: var(--text-size-3xl)*/
+        font-size: var(--text-size-2xl)
+    }
+
+    h3 {
+        /*font-size: var(--text-size-2xl)*/
+        font-size: var(--text-size-xl)
+    }
+
+    h4 {
+        /*font-size: var(--text-size-xl)*/
+        font-size: var(--text-size-lg)
+    }
+
+    h5 {
+        font-size: var(--text-size-md)
+    }
+
+    h6 {
+        font-size: var(--text-size-sm)
+    }
+
+    .publication_info {
+        color: var(--grey-600)
+    }
+
+    div.highlight {
+        max-width: 40rem;
+        margin-inline: auto;
+        border-radius: 5px;
+        overflow: clip;
+        box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
+    pre.codeblock {
+        padding: 10px;
+        white-space: pre-wrap;
+        overflow-x: scroll;
+    }
+}
+
+
+.lessons {
+    margin-bottom: 2rem;
+
+    h1 {
+        margin-top: 3rem;
+    }
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    a {
+        text-decoration: none;
+    }
+}
+.lesson-card {
+    border: solid 1px var(--grey-300);
+    border-radius: 5px;
+    padding: 1rem;
+    &:hover {
+        background-color: var(--grey-50);
+    }
+}

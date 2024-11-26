@@ -13,16 +13,36 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.hero-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+:root {
+    --grey-50: #f6f6f6;
+    --grey-100: #e7e7e7;
+    --grey-200: #d1d1d1;
+    --grey-300: #b0b0b0;
+    --grey-400: #979797;
+    --grey-500: #6d6d6d;
+    --grey-600: #5d5d5d;
+    --grey-700: #4f4f4f;
+    --grey-800: #454545;
+    --grey-900: #3d3d3d;
+    --grey-950: #262626;
+}
+:root {
+    --text-size-base: 1rem;
+    --text-size-xs: 0.64rem;
+    --text-size-sm: 0.8rem;
+    --text-size-md: var(--text-size-base);
+    --text-size-lg: 1.25rem;
+    --text-size-xl: 1.56rem;
+    --text-size-2xl: 1.95rem;
+    --text-size-3xl: 2.44rem;
+    --text-size-4xl: 3.05rem;
+    --text-size-5xl: 3.81rem;
+}
 
-    .hero {
-        max-width: 500px;
-        img {
-            width: 100%;
-        }
-        text-align: center;
-    }
+body {
+    line-height: 1.65;
+}
+
+a {
+    color: currentColor;
 }

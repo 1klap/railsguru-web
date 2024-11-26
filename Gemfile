@@ -42,12 +42,17 @@ gem "thruster", require: false
 
 # Markdown rendering
 gem "redcarpet", "~> 3.6"
+# Ruby syntex highlighting
+gem "rouge"
 
 # OAuth authentication
 gem "omniauth", "~> 2.1", ">= 2.1.2"
 gem "omniauth-rails_csrf_protection", "~> 1.0", ">= 1.0.2"
 gem "omniauth-google-oauth2", "~> 1.1", ">= 1.1.3"
 gem "omniauth-github", "~> 2.0.0"
+
+# Time formatting
+gem "local_time"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

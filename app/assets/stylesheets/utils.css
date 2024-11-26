@@ -1,0 +1,14 @@
+.container {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--size-md);
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.spacer {
+    flex-grow: 1;
+}

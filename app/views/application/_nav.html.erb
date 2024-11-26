@@ -1,0 +1,23 @@
+<nav class="main-navigation">
+  <div>
+    <%= link_to root_path do %>
+      <span>railsguru<span>.dev</span></span>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to "Lessons", lessons_path %>
+  </div>
+  <div class="spacer"></div>
+  <% if authenticated? %>
+    <div>
+      Signed in as <%= Current.user.email %> (<%= Current.user.full_name %>).
+    </div>
+    <div>
+      <%= button_to "Sign out", session_path, method: :delete %>
+    </div>
+  <% else %>
+    <div>
+      <%= link_to "Sign in", new_session_path %>
+    </div>
+  <% end %>
+</nav>

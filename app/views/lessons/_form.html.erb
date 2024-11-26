@@ -1,0 +1,47 @@
+<%= form_with(model: lesson) do |form| %>
+  <% if lesson.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+      <ul>
+        <% lesson.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :slug, style: "display: block" %>
+    <%= form.textarea :slug %>
+  </div>
+
+  <div>
+    <%= form.label :summary, style: "display: block" %>
+    <%= form.textarea :summary %>
+  </div>
+
+  <div>
+    <%= form.label :content_text, style: "display: block" %>
+    <%= form.textarea :content_text, size: "80x20" %>
+  </div>
+
+  <div>
+    <%= form.label :published, style: "display: block" %>
+    <%= form.checkbox :published %>
+  </div>
+
+  <div>
+    <%= form.label :published_at, style: "display: block" %>
+    <%= form.datetime_field :published_at %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

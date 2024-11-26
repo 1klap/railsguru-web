@@ -1,22 +1,27 @@
-<% if authenticated? %>
-  <nav>
-    Signed in as <%= Current.user.email %> (<%= Current.user.full_name %>).
-    <%= button_to "Sign out", session_path, method: :delete %>
-  </nav>
-<% else %>
-  <nav>
-    <%= link_to "Sign in", new_session_path %>
-  </nav>
-<% end %>
-
-<main>
+<main class="p-4">
   <div class="hero-wrapper">
     <div class="hero">
-      <%= image_tag "guru.svg" %>
+      <%= image_tag "guru.svg", alt: "Lineart drawing of a guru in a meditative pose" %>
       <h1>Welcome to railsguru.dev</h1>
-      <h2>Please be patient for a little while, the guru is still in his morning routine</h2>
+      <h2 class="text-size-h3">Your source for all things Ruby on Rails</h2>
+
+      <h3 class="text-size-h5">Please be patient for a little while, the guru is still in his morning routine. First lessons are coming in, have a look below.</h3>
       <p>You can reach out in the meantime on <%= link_to "x.com", "https://x.com/railsguru_dev" %> or read up in
         the <%= link_to "blog", blogs_path %></p>
     </div>
+  </div>
+
+  <div class="container">
+  <div class="lessons">
+    <%= link_to lessons_path do %>
+      <h2>Lessons</h2>
+    <% end %>
+
+    <% @lessons.each do |lesson| %>
+      <%= link_to lesson_path(lesson.slug) do %>
+        <%= render partial: "lessons/lesson-card", locals: { lesson: } %>
+      <% end %>
+    <% end %>
+  </div>
   </div>
 </main>

@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container p-4">
+  <%#= link_to "Back to Lessons", lessons_path %>
+
+  <%= render @lesson %>
+
+  <% if Current.user&.admin? %>
+    <div>
+      <%= link_to "Edit this lesson", edit_lesson_path(@lesson) %> |
+
+      <%#= button_to "Destroy this lesson", @lesson, method: :delete %>
+    </div>
+  <% end %>
+
+
+</div>

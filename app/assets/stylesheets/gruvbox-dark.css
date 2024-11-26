@@ -1,0 +1,105 @@
+.codeblock table td { padding: 5px; }
+.codeblock table pre { margin: 0; }
+.codeblock, .codeblock .w {
+  color: #fbf1c7;
+  background-color: #282828;
+}
+.codeblock .err {
+  color: #fb4934;
+  background-color: #282828;
+  font-weight: bold;
+}
+.codeblock .c, .codeblock .ch, .codeblock .cd, .codeblock .cm, .codeblock .cpf, .codeblock .c1, .codeblock .cs {
+  color: #928374;
+  font-style: italic;
+}
+.codeblock .cp {
+  color: #8ec07c;
+}
+.codeblock .nt {
+  color: #fb4934;
+}
+.codeblock .o, .codeblock .ow {
+  color: #fbf1c7;
+}
+.codeblock .p, .codeblock .pi {
+  color: #fbf1c7;
+}
+.codeblock .gi {
+  color: #b8bb26;
+  background-color: #282828;
+}
+.codeblock .gd {
+  color: #fb4934;
+  background-color: #282828;
+}
+.codeblock .gh {
+  color: #b8bb26;
+  font-weight: bold;
+}
+.codeblock .ge {
+  font-style: italic;
+}
+.codeblock .ges {
+  font-weight: bold;
+  font-style: italic;
+}
+.codeblock .gs {
+  font-weight: bold;
+}
+.codeblock .k, .codeblock .kn, .codeblock .kp, .codeblock .kr, .codeblock .kv {
+  color: #fb4934;
+}
+.codeblock .kc {
+  color: #d3869b;
+}
+.codeblock .kt {
+  color: #fabd2f;
+}
+.codeblock .kd {
+  color: #fe8019;
+}
+.codeblock .s, .codeblock .sb, .codeblock .sc, .codeblock .dl, .codeblock .sd, .codeblock .s2, .codeblock .sh, .codeblock .sx, .codeblock .s1 {
+  color: #b8bb26;
+  font-style: italic;
+}
+.codeblock .si {
+  /*color: #b8bb26;*/
+  color: #83a598;
+  font-style: italic;
+}
+.codeblock .sr {
+  color: #b8bb26;
+  font-style: italic;
+}
+.codeblock .sa {
+  color: #fb4934;
+}
+.codeblock .se {
+  color: #fe8019;
+}
+.codeblock .nn {
+  color: #8ec07c;
+}
+.codeblock .nc {
+  color: #8ec07c;
+}
+.codeblock .no {
+  /*color: #d3869b;*/
+  color: #fabd2f;
+}
+.codeblock .nf {
+  color: #b8bb26;
+}
+.codeblock .na {
+  color: #b8bb26;
+}
+.codeblock .m, .codeblock .mb, .codeblock .mf, .codeblock .mh, .codeblock .mi, .codeblock .il, .codeblock .mo, .codeblock .mx {
+  color: #d3869b;
+}
+.codeblock .ss {
+  color: #83a598;
+}
+.codeblock .vi {
+  color: #83a598;
+}

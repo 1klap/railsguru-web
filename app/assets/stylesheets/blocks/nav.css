@@ -1,0 +1,9 @@
+.main-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem ;
+    border-bottom: solid 1px #e4e4e4;
+    flex-wrap: wrap;
+    align-items: center;
+}

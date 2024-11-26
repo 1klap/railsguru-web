@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   ### Domain ###
+  resources :lessons
   resources :blogs, path: "blog", only: [ :index, :show ], param: :slug
   root "home#index"
 

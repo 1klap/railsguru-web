@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Authentication
+  # include Authorization
   before_action :ensure_visitor_hash_present
   before_action :annotate_request
 
