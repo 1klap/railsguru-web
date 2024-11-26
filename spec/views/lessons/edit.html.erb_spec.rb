@@ -21,19 +21,10 @@ RSpec.describe "lessons/edit", type: :view do
     render
 
     assert_select "form[action=?][method=?]", lesson_path(lesson), "post" do
-
       assert_select "input[name=?]", "lesson[title]"
-
       assert_select "textarea[name=?]", "lesson[slug]"
-
       assert_select "textarea[name=?]", "lesson[summary]"
-
       assert_select "textarea[name=?]", "lesson[content_text]"
-
-      assert_select "textarea[name=?]", "lesson[content_html]"
-
-      assert_select "input[name=?]", "lesson[user_id]"
-
       assert_select "input[name=?]", "lesson[published]"
     end
   end

@@ -6,7 +6,6 @@ module Authorization
     def authorize_if(value)
       raise UnauthorizedError unless value
     end
-
 end
 
 class UnauthorizedError < StandardError

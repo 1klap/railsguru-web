@@ -97,4 +97,3 @@ class LessonsController < ApplicationController
       params.expect(lesson: [ :title, :slug, :summary, :content_text, :content_html, :published, :published_at ])
     end
 end
-
