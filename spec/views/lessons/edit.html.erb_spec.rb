@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "lessons/edit", type: :view do
+  fixtures :users
+
+  let(:admin) { users(:admin) }
   let(:lesson) {
     Lesson.create!(
       title: "MyString",
@@ -8,7 +11,7 @@ RSpec.describe "lessons/edit", type: :view do
       summary: "MyText",
       content_text: "MyText",
       content_html: "MyText",
-      user: nil,
+      user: admin,
       published: false
     )
   }

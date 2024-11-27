@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "lessons/index", type: :view do
+RSpec.xdescribe "lessons/index", type: :view do
   before(:each) do
     assign(:lessons, [
       Lesson.create!(

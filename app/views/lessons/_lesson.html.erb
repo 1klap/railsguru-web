@@ -4,7 +4,12 @@
     <h1><%= lesson.title %></h1>
 
     <section class="publication_info">
-      <%= local_time(lesson.published_at, '%B %e, %Y') %> by <%= lesson.user.full_name %>
+      <% if lesson.published? %>
+        <%= local_time(lesson.published_at, '%B %e, %Y') %>
+      <% else %>
+        Draft
+      <% end %>
+      by <%= lesson.user.full_name %>
     </section>
 
     <section>

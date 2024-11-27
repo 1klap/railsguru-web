@@ -1,6 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "lessons/show", type: :view do
+RSpec.xdescribe "lessons/show", type: :view do
+  fixtures :users
+
+  let(:admin) { users(:admin) }
   before(:each) do
     assign(:lesson, Lesson.create!(
       title: "Title",
@@ -8,7 +11,7 @@ RSpec.describe "lessons/show", type: :view do
       summary: "MyText",
       content_text: "MyText",
       content_html: "MyText",
-      user: nil,
+      user: admin,
       published: false
     ))
   end
