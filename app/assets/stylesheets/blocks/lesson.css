@@ -46,6 +46,13 @@
         white-space: pre-wrap;
         overflow-x: scroll;
     }
+
+    :not(pre.codeblock) > code {
+        font-size: var(--text-size-sm);
+        background-color: var(--grey-100);
+        padding: 0.2rem 0.4rem;
+        border-radius: 5px;
+    }
 }
 
 
