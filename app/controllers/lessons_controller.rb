@@ -37,7 +37,7 @@ class LessonsController < ApplicationController
     rougeified = Rougeify.new(filter_html: true, hard_wrap: true)
     markdown_renderer = Redcarpet::Markdown.new(rougeified, autolink: true, fenced_code_blocks: true)
     @lesson.content_html = markdown_renderer.render(@lesson.content_text)
-    if @lesson.published? || @lesson.published_at.nil?
+    if @lesson.published? && @lesson.published_at.nil?
       @lesson.published_at = Time.zone.now
     end
 
@@ -58,7 +58,7 @@ class LessonsController < ApplicationController
     markdown_renderer = Redcarpet::Markdown.new(rougeified, autolink: true, fenced_code_blocks: true)
     @lesson.assign_attributes(lesson_params)
     @lesson.content_html = markdown_renderer.render(@lesson.content_text)
-    if @lesson.published? || @lesson.published_at.nil?
+    if @lesson.published? && @lesson.published_at.nil?
       @lesson.published_at = Time.zone.now
     end
 
