@@ -8,7 +8,8 @@
 
     h2 {
         /*font-size: var(--text-size-3xl)*/
-        font-size: var(--text-size-2xl)
+        font-size: var(--text-size-2xl);
+        margin-block: 2rem 1rem;
     }
 
     h3 {
