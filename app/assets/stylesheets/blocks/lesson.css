@@ -14,20 +14,24 @@
 
     h3 {
         /*font-size: var(--text-size-2xl)*/
-        font-size: var(--text-size-xl)
+        font-size: var(--text-size-xl);
+        margin-top: 2rem;
     }
 
     h4 {
         /*font-size: var(--text-size-xl)*/
-        font-size: var(--text-size-lg)
+        font-size: var(--text-size-lg);
+        margin-top: 1rem;
     }
 
     h5 {
-        font-size: var(--text-size-md)
+        font-size: var(--text-size-md);
+        margin-top: 1rem;
     }
 
     h6 {
-        font-size: var(--text-size-sm)
+        font-size: var(--text-size-sm);
+        margin-top: 1rem;
     }
 
     .publication_info {
